@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Vagas
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+      <ion-label>Selecione seu curso</ion-label>
+      <ion-select [(ngModel)]="vaga.curso" class="select">
+          <ion-select-option *ngFor="let vaga of vagas | async" [value] ="vaga.curso" (ionChange)="filtraCurso(vaga.curso);">{{vaga.curso}}</ion-select-option>
+      </ion-select> 
+  </ion-item>
+ 
+  <ion-card *ngFor="let vaga of vagas | async">
+    <ion-item>
+        <h2>{{vaga.nome_vaga}} - {{vaga.empresa}}</h2>
+    </ion-item>
+    <ion-card-content>  
+      <h2>Informações da Vaga</h2><br>
+      <ion-label>{{vaga.bolsa}}</ion-label><br>
+      <ion-label>{{vaga.prereq}}</ion-label><br>
+      <ion-label>{{vaga.descricao}}</ion-label><br><br>
+      <h2>Contatos</h2><br>
+      <ion-label>{{vaga.email}}</ion-label><br>
+      <ion-label>{{vaga.telefone}}</ion-label><br>
+      <ion-label>{{vaga.endereco}}</ion-label>
+    </ion-card-content>   
+  </ion-card>
+</ion-content>

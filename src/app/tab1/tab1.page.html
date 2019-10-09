@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form (ngSubmit)="onSubmit()">
+      <ion-item>
+          <ion-label position="floating">Curso</ion-label>
+          <ion-input type="text" [(ngModel)]= "vaga.curso" name="curso"></ion-input>
+        </ion-item>
+    <ion-item>
+      <ion-label position="floating">Empresa</ion-label>
+      <ion-input type="text" [(ngModel)]= "vaga.empresa" name="empresa"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Vaga</ion-label>
+      <ion-input type="text" [(ngModel)]= "vaga.nome_vaga" name="nome_vaga"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Valor da Bolsa</ion-label>
+      <ion-input type="number" [(ngModel)]= "vaga.bolsa" name="bolsa"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Endereço</ion-label>
+      <ion-input type="text" [(ngModel)]= "vaga.endereco" name="endereco"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="email" [(ngModel)]= "vaga.email" name="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Telefone</ion-label>
+      <ion-input type="tel" [(ngModel)]= "vaga.telefone" name="telefone"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Pré Requisitos</ion-label>
+      <ion-textarea auto-grow="true" [(ngModel)]= "vaga.prereq" name="prereq"></ion-textarea>
+    </ion-item>
+    <ion-item>
+        <ion-label position="floating">Descrição</ion-label>
+        <ion-textarea auto-grow="true" [(ngModel)]= "vaga.descricao" name="descricao"></ion-textarea>
+    </ion-item>
+    <ion-button type="submit" class="btn btn-primary">Salvar</ion-button>
+  </form>
+</ion-content>
