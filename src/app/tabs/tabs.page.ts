@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Vagas} from '../vaga-estagio/shared/vaga';
+
 
 @Component({
   selector: 'app-tabs',
@@ -6,7 +8,9 @@ import { Component } from '@angular/core';
   styleUrls: ['tabs.page.scss']
 })
 export class TabsPage {
+ 
+  constructor() {
 
-  constructor() {}
+  }
 
 }

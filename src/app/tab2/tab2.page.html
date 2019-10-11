@@ -7,12 +7,16 @@
 </ion-header>
 
 <ion-content>
+    <form (ngSubmit)="onSubmit()">
   <ion-item>
-      <ion-label>Selecione seu curso</ion-label>
+      <!-- <ion-label>Selecione seu curso</ion-label>
       <ion-select [(ngModel)]="vaga.curso" class="select">
-          <ion-select-option *ngFor="let vaga of vagas | async" [value] ="vaga.curso" (ionChange)="filtraCurso(vaga.curso);">{{vaga.curso}}</ion-select-option>
-      </ion-select> 
+          <ion-select-option *ngFor="let vaga of vagas | async" [value] ="vaga.curso" (ionChange)="filtraCurso([value]);">{{vaga.curso}}</ion-select-option>
+      </ion-select>  -->
+      <ion-input type="text" [(ngModel)]= "curso" name="curso"></ion-input>
+      <ion-button type="submit" class="btn btn-primary">Pesquisar</ion-button>
   </ion-item>
+  </form>
  
   <ion-card *ngFor="let vaga of vagas | async">
     <ion-item>
@@ -28,6 +32,10 @@
       <ion-label>{{vaga.telefone}}</ion-label><br>
       <ion-label>{{vaga.endereco}}</ion-label>
     </ion-card-content>   
+    <ion-card-footer>
+      <!-- <ion-button routerLink="/tabs" routerDirection="root">Editar</ion-button> -->
+    </ion-card-footer>
   </ion-card>
   <ion-button class="buttland2" [routerLink]="['/principal']" shape="around" size="small" color="danger" routerdirection="foward">Voltar</ion-button>
 </ion-content>
+

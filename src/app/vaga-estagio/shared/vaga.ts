@@ -1,4 +1,5 @@
 export class Vagas {
+    id: string='';
     empresa: string= '';
     nome_vaga: string= '';
     bolsa: number;

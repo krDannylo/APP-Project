@@ -3,15 +3,23 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false,
+  production: false, 
   firebase: {
-    apiKey: "AIzaSyAiTm8oYeRJrsUlWlO-DZtLaILt-erZCt8",
-    authDomain: "projeto-estagios.firebaseapp.com",
-    databaseURL: "https://projeto-estagios.firebaseio.com",
-    projectId: "projeto-estagios",
-    storageBucket: "",
-    messagingSenderId: "404722920240",
-    appId: "1:404722920240:web:1daee88aafda7d4170b6f5"
+    // apiKey: "AIzaSyAiTm8oYeRJrsUlWlO-DZtLaILt-erZCt8",
+    // authDomain: "projeto-estagios.firebaseapp.com",
+    // databaseURL: "https://projeto-estagios.firebaseio.com",
+    // projectId: "projeto-estagios",
+    // storageBucket: "projeto-estagios.appspot.com",
+    // messagingSenderId: "404722920240",
+    // appId: "1:404722920240:web:1daee88aafda7d4170b6f5"
+
+    apiKey: "AIzaSyDzjnEilDNopOG54xtytEPeVFjQAj5L0_c",
+    authDomain: "projeto-estagio-2.firebaseapp.com",
+    databaseURL: "https://projeto-estagio-2.firebaseio.com",
+    projectId: "projeto-estagio-2",
+    storageBucket: "projeto-estagio-2.appspot.com",
+    messagingSenderId: "1061422708699",
+    appId: "1:1061422708699:web:10af7a8ef525d615d019fe"
   }
 
 };
